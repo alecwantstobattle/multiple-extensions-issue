@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListInstance
+        FeatureId="00bfea71-de22-43b2-a848-c05709900100"
+        Title="Summary"
+        Description="Project Management - Summary"
+        CustomSchema="pm_schema.xml"
+        TemplateType="100"
+        Url="Lists/Summary">
+    </ListInstance>
+    <ListInstance
+        FeatureId="00bfea71-de22-43b2-a848-c05709900100"
+        Title="Safety Design"
+        Description="Project Management - Safety Design"
+        CustomSchema="sd_schema.xml"
+        TemplateType="100"
+        Url="Lists/SafetyDesign">
+    </ListInstance>
+    <ListInstance
+        FeatureId="00bfea71-de22-43b2-a848-c05709900100"
+        Title="Review Types"
+        Description="Project Management - Review Type"
+        CustomSchema="rt_schema.xml"
+        TemplateType="100"
+        Url="Lists/ReviewTypes">
+        <Data>
+            <Rows>
+                <Row>
+                    <Field Name="Title">Assumption</Field>
+                    <Field Name="Group">Calculations</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Input</Field>
+                    <Field Name="Group">Calculations</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Loads</Field>
+                    <Field Name="Group">Calculations</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Layout/dimensions</Field>
+                    <Field Name="Group">Calculations</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Hand calculations</Field>
+                    <Field Name="Group">Calculations</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">3D analysis outputs</Field>
+                    <Field Name="Group">Calculations</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">3D analysis Inputs</Field>
+                    <Field Name="Group">Calculations</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Members</Field>
+                    <Field Name="Group">Results</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Connections</Field>
+                    <Field Name="Group">Results</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Whole system</Field>
+                    <Field Name="Group">Results</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Foundation</Field>
+                    <Field Name="Group">Results</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">General</Field>
+                    <Field Name="Group">Drawings</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Content</Field>
+                    <Field Name="Group">Drawings</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">General notes</Field>
+                    <Field Name="Group">Drawings</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Plan/GA</Field>
+                    <Field Name="Group">Drawings</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Elevations/Sections</Field>
+                    <Field Name="Group">Drawings</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Details</Field>
+                    <Field Name="Group">Drawings</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">General</Field>
+                    <Field Name="Group">Reports</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Content</Field>
+                    <Field Name="Group">Reports</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Formatting</Field>
+                    <Field Name="Group">Reports</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Supporting documents</Field>
+                    <Field Name="Group">Reports</Field>
+                </Row>
+            </Rows>
+        </Data>
+    </ListInstance>
+    <ListInstance
+        FeatureId="00bfea71-de22-43b2-a848-c05709900100"
+        Title="Review Checklist"
+        Description="Project Management - Review Checklist"
+        CustomSchema="rc_schema.xml"
+        TemplateType="100"
+        Url="Lists/ReviewChecklist">
+    </ListInstance>
+    <ListInstance
+        FeatureId="00bfea71-de22-43b2-a848-c05709900100"
+        Title="Change Request"
+        Description="Project Management - Change Request"
+        CustomSchema="cr_schema.xml"
+        TemplateType="100"
+        Url="Lists/ChangeRequest">
+    </ListInstance>
+    <ListInstance
+        FeatureId="00bfea71-de22-43b2-a848-c05709900100"
+        Title="Lesson Learnt"
+        Description="Project Management - Lesson Learnt"
+        CustomSchema="ll_schema.xml"
+        TemplateType="100"
+        Url="Lists/LessonLearnt">
+    </ListInstance>
+</Elements>

@@ -1,0 +1,112 @@
+<List xmlns="http://schemas.microsoft.com/sharepoint/"
+    xmlns:ows="Microsoft SharePoint"
+    Title="Lesson Learnt"
+    EnableContentTypes="TRUE"
+    FolderCreation="FALSE"
+    Direction="$Resources:Direction;"
+    Url="Lists/LessonLearnt"
+    BaseType="0">
+    <MetaData>
+        <Fields>
+            <Field Type="Lookup" DisplayName="Project" Required="FALSE"
+                ID="{982f7e6e-afd7-47dc-8e6c-67318d942229}" 
+                Name="Project"
+                StaticName="Project"
+                List="Lists/TSSPProject Poll"
+                ShowField="Title" />
+            <Field Type="Lookup" DisplayName="Stage" Required="FALSE"
+                ID="{f40fc60e-7fb3-42a3-a189-49863eeac1ff}" Name="Stage"
+                StaticName="Stage"
+                List="Lists/TSSPProject Task Poll"
+                ShowField="Title" />
+            <Field Type="Note" DisplayName="Description" Required="FALSE"
+                ID="{8e366b7e-2750-4654-97a3-5f73083017e8}"
+                StaticName="Description"
+                Name="Description"
+                RichText="FALSE" RichTextMode="Compatible"
+                IsolateStyles="FALSE" AppendOnly="FALSE" NumLines="6"
+            />
+            <Field Type="Note" DisplayName="Impact" Required="FALSE"
+                ID="{48101da2-1e6e-4c75-8ebe-97a17edefe67}"
+                StaticName="Impact"
+                Name="Impact"
+                RichText="FALSE" RichTextMode="Compatible"
+                IsolateStyles="FALSE" AppendOnly="FALSE" NumLines="6"
+            />
+            <Field Type="Note" DisplayName="Challenges" Required="FALSE"
+                ID="{d32b0adf-234b-4a91-9342-04bdb7e30d51}"
+                StaticName="Challenges"
+                Name="Challenges"
+                RichText="FALSE" RichTextMode="Compatible"
+                IsolateStyles="FALSE" AppendOnly="FALSE" NumLines="6"
+            />
+            <Field Type="Note" DisplayName="Recommendations" Required="FALSE"
+                ID="{bc6ea7a3-a99f-46db-a42b-6d6cc89150e4}"
+                StaticName="Recommendations"
+                Name="Recommendations"
+                RichText="FALSE" RichTextMode="Compatible"
+                IsolateStyles="FALSE" AppendOnly="FALSE" NumLines="6"
+            />
+            <Field Type="DateTime" DisplayName="Date" Required="TRUE"
+                ID="{b4b93197-f271-4748-ae62-811861dbe5a5}"
+                Name="Date"
+                StaticName="Date">
+            </Field>
+            <Field Type="Choice" DisplayName="Change Request" Required="TRUE"
+                ID="{5b451425-798a-41cd-9e4c-a66443c45cb8}"
+                StaticName="ChangeRequest"
+                Name="ChangeRequest">
+                <CHOICES>
+                    <CHOICE>Yes</CHOICE>
+                    <CHOICE>No</CHOICE>
+                </CHOICES>
+            </Field>
+            <Field Type="Number" DisplayName="Sequence" Required="FALSE"
+                Min="0"
+                ID="{6dd08bf8-3e9d-4996-9ab9-685b50394fc4}"
+                StaticName="Sequence"
+                Name="Sequence"
+            />
+        </Fields>
+        <Views>
+            <View BaseViewID="1"
+                Type="HTML"
+                WebPartZoneID="Main"
+                DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;"
+                DefaultView="TRUE"
+                MobileView="TRUE"
+                MobileDefaultView="TRUE"
+                SetupPath="pages\viewpage.aspx"
+                ImageUrl="/_layouts/images/generic.png"
+                Url="AllItems.aspx">
+                <XslLink Default="TRUE">main.xsl</XslLink>
+                <JSLink>clienttemplates.js</JSLink>
+                <RowLimit Paged="TRUE">30</RowLimit>
+                <Toolbar Type="Standard" />
+                <ViewFields>
+                    <FieldRef Name="Project"></FieldRef>
+                    <FieldRef Name="Stage"></FieldRef>
+                    <FieldRef Name="Description"></FieldRef>
+                    <FieldRef Name="Impact"></FieldRef>
+                    <FieldRef Name="Challenges"></FieldRef>
+                    <FieldRef Name="Recommendations"></FieldRef>
+                    <FieldRef Name="Date"></FieldRef>
+                    <FieldRef Name="ChangeRequest"></FieldRef>
+                    <FieldRef Name="Sequence"></FieldRef>
+                </ViewFields>
+                <Query>
+                    <OrderBy>
+                        <FieldRef Name="ID" />
+                    </OrderBy>
+                </Query>
+            </View>
+        </Views>
+        <Forms>
+            <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx"
+                WebPartZoneID="Main" />
+            <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx"
+                WebPartZoneID="Main" />
+            <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+        </Forms>
+    </MetaData>
+</List>

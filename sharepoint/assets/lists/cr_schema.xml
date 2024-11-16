@@ -1,0 +1,111 @@
+<List xmlns="http://schemas.microsoft.com/sharepoint/"
+    xmlns:ows="Microsoft SharePoint"
+    Title="Change Request"
+    EnableContentTypes="TRUE"
+    FolderCreation="FALSE"
+    Direction="$Resources:Direction;"
+    Url="Lists/ChangeRequest"
+    BaseType="0">
+    <MetaData>
+        <Fields>
+            <Field Type="Lookup" DisplayName="Project" Required="FALSE"
+                ID="{89b86a99-02c8-40dd-89fd-2ff9eada4e81}" 
+                Name="Project"
+                StaticName="Project"
+                List="Lists/TSSPProject Poll"
+                ShowField="Title" />
+            <Field Type="Lookup" DisplayName="Stage" Required="FALSE"
+                ID="{771e9a7e-dd59-4f91-b407-4ce53128d3ab}" 
+                Name="Stage"
+                StaticName="Stage"
+                List="Lists/TSSPProject Task Poll"
+                ShowField="Title" />
+            <Field Type="User" DisplayName="Person Responsible" Required="FALSE"
+                ID="{e462caa0-dede-40f9-9c42-ac4af1e6119c}"
+                StaticName="PersonResponsible"
+                Name="PersonResponsible">
+                <UserSelectionMode>PeopleOnly</UserSelectionMode>
+            </Field>
+            <Field Type="Note" DisplayName="Description of Variation" Required="FALSE"
+                ID="{738531de-c8ad-4f67-8d63-90bf752bc5ee}"
+                StaticName="Description"
+                Name="Description"
+                RichText="FALSE" RichTextMode="Compatible"
+                IsolateStyles="FALSE" AppendOnly="FALSE" NumLines="6"
+            />
+            <Field Type="Note" DisplayName="Remedy" Required="FALSE"
+                ID="{601640e1-f306-4c0c-82ca-4cdf4c3d253d}"
+                StaticName="Remedy"
+                Name="Remedy"
+                RichText="FALSE" RichTextMode="Compatible"
+                IsolateStyles="FALSE" AppendOnly="FALSE" NumLines="6"
+            />
+            <Field Type="Text" DisplayName="Requested By" Required="FALSE"
+                ID="{b17e24d1-9775-4bdf-af8d-955eb2d6dc2a}"
+                StaticName="RequestedBy"
+                Name="RequestedBy"
+            />
+            <Field Type="Choice" DisplayName="Status" Required="TRUE"
+                ID="{77182946-fb4d-4873-ad15-abcc3652cea1}"
+                StaticName="Status"
+                Name="Status">
+                <CHOICES>
+                    <CHOICE>In Progress</CHOICE>
+                    <CHOICE>Hold</CHOICE>
+                    <CHOICE>Complete</CHOICE>
+                </CHOICES>
+            </Field>
+            <Field Type="Number" DisplayName="Sequence" Required="FALSE"
+                Min="0"
+                ID="{ee2576c5-1d8b-477f-9451-495819b69bc0}"
+                StaticName="Sequence"
+                Name="Sequence"
+            />
+            <Field Type="DateTime" DisplayName="Date" Required="TRUE"
+                ID="{442082c0-8300-42c1-950e-d1409684f0b5}"
+                Name="Date"
+                StaticName="Date">
+            </Field>
+        </Fields>
+        <Views>
+            <View BaseViewID="1"
+                Type="HTML"
+                WebPartZoneID="Main"
+                DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;"
+                DefaultView="TRUE"
+                MobileView="TRUE"
+                MobileDefaultView="TRUE"
+                SetupPath="pages\viewpage.aspx"
+                ImageUrl="/_layouts/images/generic.png"
+                Url="AllItems.aspx">
+                <XslLink Default="TRUE">main.xsl</XslLink>
+                <JSLink>clienttemplates.js</JSLink>
+                <RowLimit Paged="TRUE">30</RowLimit>
+                <Toolbar Type="Standard" />
+                <ViewFields>
+                    <FieldRef Name="Project"></FieldRef>
+                    <FieldRef Name="Stage"></FieldRef>
+                    <FieldRef Name="RequestedBy"></FieldRef>
+                    <FieldRef Name="Description"></FieldRef>
+                    <FieldRef Name="Remedy"></FieldRef>
+                    <FieldRef Name="PersonResponsible"></FieldRef>
+                    <FieldRef Name="Date"></FieldRef>
+                    <FieldRef Name="Status"></FieldRef>
+                    <FieldRef Name="Sequence"></FieldRef>
+                </ViewFields>
+                <Query>
+                    <OrderBy>
+                        <FieldRef Name="ID" />
+                    </OrderBy>
+                </Query>
+            </View>
+        </Views>
+        <Forms>
+            <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx"
+                WebPartZoneID="Main" />
+            <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx"
+                WebPartZoneID="Main" />
+            <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+        </Forms>
+    </MetaData>
+</List>

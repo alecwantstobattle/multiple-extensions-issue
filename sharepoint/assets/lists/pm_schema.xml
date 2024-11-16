@@ -1,0 +1,149 @@
+<List xmlns="http://schemas.microsoft.com/sharepoint/"
+    xmlns:ows="Microsoft SharePoint"
+    Title="Summary"
+    EnableContentTypes="TRUE"
+    FolderCreation="FALSE"
+    Direction="$Resources:Direction;"
+    Url="Lists/Summary"
+    BaseType="0">
+    <MetaData>
+        <Fields>
+            <Field Type="Lookup" DisplayName="Project" Required="FALSE"
+                ID="{443de241-d78b-4db4-bcf8-c3cb36ef452d}" Name="Project"
+                StaticName="Project"
+                List="Lists/TSSPProject Poll"
+                ShowField="Title" />
+            <Field Type="Lookup" DisplayName="Stage" Required="FALSE"
+                ID="{af7beaf5-1081-42ac-aa6f-2d3746e16383}" Name="Stage"
+                StaticName="Stage"
+                List="Lists/TSSPProject Task Poll"
+                ShowField="Title" />
+            <Field Type="DateTime" DisplayName="End Date" Required="TRUE"
+                ID="{81d9d374-617a-4b81-8985-a8a5c6c465d8}"
+                Name="EndDate"
+                StaticName="EndDate">
+            </Field>
+            <Field Type="User" DisplayName="Engineer" Required="FALSE"
+                ID="{f9523a6b-7a2f-4409-8e11-8af4ca6d4d35}"
+                StaticName="Engineer"
+                Name="Engineer">
+                <UserSelectionMode>PeopleOnly</UserSelectionMode>
+            </Field>
+            <Field Type="User" DisplayName="Reviewer" Required="FALSE"
+                ID="{01f9ba48-9fbc-4889-a81e-8f796ae21627}"
+                StaticName="Reviewer"
+                Name="Reviewer">
+                <UserSelectionMode>PeopleOnly</UserSelectionMode>
+            </Field>
+            <Field Type="Choice" DisplayName="Error in Structural Design" Required="TRUE"
+                ID="{3c51d2fd-791d-4f70-8b85-1f167c6b8cf4}"
+                StaticName="StructuralDesignError"
+                Name="StructuralDesignError">
+                <CHOICES>
+                    <CHOICE>Low</CHOICE>
+                    <CHOICE>Normal</CHOICE>
+                    <CHOICE>High</CHOICE>
+                    <CHOICE>Extreme</CHOICE>
+                </CHOICES>
+            </Field>
+            <Field Type="Choice" DisplayName="Compliance" Required="TRUE"
+                ID="{cf9b09dd-1fdb-4563-81a3-49f47d5d7cdd}"
+                StaticName="Compliance"
+                Name="Compliance">
+                <CHOICES>
+                    <CHOICE>Low</CHOICE>
+                    <CHOICE>Normal</CHOICE>
+                    <CHOICE>High</CHOICE>
+                    <CHOICE>Extreme</CHOICE>
+                </CHOICES>
+            </Field>
+            <Field Type="Choice" DisplayName="Financial" Required="TRUE"
+                ID="{70c437e6-5dc2-49e8-8f07-703bc47315dd}"
+                StaticName="Financial"
+                Name="Financial">
+                <CHOICES>
+                    <CHOICE>Low</CHOICE>
+                    <CHOICE>Normal</CHOICE>
+                    <CHOICE>High</CHOICE>
+                    <CHOICE>Extreme</CHOICE>
+                </CHOICES>
+            </Field>
+            <Field Type="Choice" DisplayName="Project Execution" Required="TRUE"
+                ID="{00a9a81e-5e1a-44fb-8f75-280bea11346c}"
+                StaticName="ProjectExecution"
+                Name="ProjectExecution">
+                <CHOICES>
+                    <CHOICE>Low</CHOICE>
+                    <CHOICE>Normal</CHOICE>
+                    <CHOICE>High</CHOICE>
+                    <CHOICE>Extreme</CHOICE>
+                </CHOICES>
+            </Field>
+            <Field Type="Choice" DisplayName="Overall Rating" Required="TRUE"
+                ID="{b0d69e51-1e5b-40fc-a56d-de3cb3fb5c65}"
+                StaticName="OverallRating"
+                Name="OverallRating">
+                <CHOICES>
+                    <CHOICE>Low</CHOICE>
+                    <CHOICE>Normal</CHOICE>
+                    <CHOICE>High</CHOICE>
+                    <CHOICE>Extreme</CHOICE>
+                </CHOICES>
+            </Field>
+            <Field Type="MultiChoice" DisplayName="Group" Required="TRUE"
+                ID="{ab6e4135-b65d-4b58-a463-ae95e9987e4f}"
+                StaticName="Group"
+                Name="Group"
+            >
+                <CHOICES>
+                    <CHOICE>Calculations</CHOICE>
+                    <CHOICE>Results</CHOICE>
+                    <CHOICE>Drawings</CHOICE>
+                    <CHOICE>Reports</CHOICE>
+                </CHOICES>
+            </Field>
+        </Fields>
+        <Views>
+            <View BaseViewID="1"
+                Type="HTML"
+                WebPartZoneID="Main"
+                DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;"
+                DefaultView="TRUE"
+                MobileView="TRUE"
+                MobileDefaultView="TRUE"
+                SetupPath="pages\viewpage.aspx"
+                ImageUrl="/_layouts/images/generic.png"
+                Url="AllItems.aspx">
+                <XslLink Default="TRUE">main.xsl</XslLink>
+                <JSLink>clienttemplates.js</JSLink>
+                <RowLimit Paged="TRUE">30</RowLimit>
+                <Toolbar Type="Standard" />
+                <ViewFields>
+                    <FieldRef Name="Project"></FieldRef>
+                    <FieldRef Name="Stage"></FieldRef>
+                    <FieldRef Name="Engineer"></FieldRef>
+                    <FieldRef Name="Reviewer"></FieldRef>
+                    <FieldRef Name="EndDate"></FieldRef>
+                    <FieldRef Name="StructuralDesignError"></FieldRef>
+                    <FieldRef Name="Compliance"></FieldRef>
+                    <FieldRef Name="Financial"></FieldRef>
+                    <FieldRef Name="ProjectExecution"></FieldRef>
+                    <FieldRef Name="OverallRating"></FieldRef>
+                    <FieldRef Name="Group"></FieldRef>
+                </ViewFields>
+                <Query>
+                    <OrderBy>
+                        <FieldRef Name="ID" />
+                    </OrderBy>
+                </Query>
+            </View>
+        </Views>
+        <Forms>
+            <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx"
+                WebPartZoneID="Main" />
+            <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx"
+                WebPartZoneID="Main" />
+            <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+        </Forms>
+    </MetaData>
+</List>

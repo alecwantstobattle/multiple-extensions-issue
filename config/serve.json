@@ -1,0 +1,33 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://devproscomau.sharepoint.com/sites/cerecon/Lists/TSSPProject%20Task%20Poll/Active%20Stages.aspx",
+      // "pageUrl": "https://{tenantDomain}/SitePages/myPage.aspx",
+      "customActions": {
+        "4bf6c425-f15d-4aab-bad2-cde88bc3c958": {
+          "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
+          "properties": {
+            "sampleTextOne": "One item is selected in the list",
+            "sampleTextTwo": "This command is always visible."
+          }
+        }
+      }
+    },
+    "projectManagementAction": {
+      "pageUrl": "https://devproscomau.sharepoint.com/sites/cerecon/Lists/TSSPProject%20Task%20Poll/Active%20Stages.aspx",
+      // "pageUrl": "https://{tenantDomain}/SitePages/myPage.aspx",
+      "customActions": {
+        "4bf6c425-f15d-4aab-bad2-cde88bc3c958": {
+          "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
+          "properties": {
+            "sampleTextOne": "One item is selected in the list",
+            "sampleTextTwo": "This command is always visible."
+          }
+        }
+      }
+    }
+  }
+}

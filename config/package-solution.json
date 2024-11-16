@@ -1,0 +1,71 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "multiple-extensions-issue-client-side-solution",
+    "id": "c92089fa-616d-47ca-a671-8ec4745089cb",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "multiple-extensions-issue description"
+      },
+      "longDescription": {
+        "default": "multiple-extensions-issue description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "Application Extension - Deployment of custom action",
+        "description": "Deploys a custom action with ClientSideComponentId association",
+        "id": "efbc76ff-de5e-4e5d-9009-7f22646234f1",
+        "version": "1.0.0.0",
+        "assets": {
+          "elementManifests": [
+            "elements.xml",
+            "ClientSideInstance.xml"
+          ]
+        }
+      },
+      {
+        "title": "Project Management List",
+        "description": "Deploys lists and columns of Project Management App",
+        "id": "a0740058-1b82-49d6-b77a-0df310e704d4",
+        "version": "1.0.0.1",
+        "assets": {
+          "elementManifests": [
+            "lists/elements-v1.xml",
+            "lists/elements-v2.xml"
+          ],
+          "elementFiles": [
+            "lists/pm_schema.xml",
+            "lists/sd_schema.xml",
+            "lists/rt_schema.xml",
+            "lists/rc_schema.xml",
+            "lists/cr_schema.xml",
+            "lists/ll_schema.xml",
+            "lists/sd_defaults_schema.xml",
+            "lists/rc_defaults_schema.xml"
+          ],
+          "upgradeActions": [
+            "upgrade-elements-v1-v2.xml"
+          ]
+        }
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/multiple-extensions-issue.sppkg"
+  }
+}

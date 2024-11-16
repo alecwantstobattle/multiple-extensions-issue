@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListInstance
+        FeatureId="00bfea71-de22-43b2-a848-c05709900100"
+        Title="Safety Design Defaults"
+        Description="Project Management - Safety Design Defaults"
+        CustomSchema="sd_defaults_schema.xml"
+        TemplateType="100"
+        Url="Lists/SafetyDesignDefaults">
+        <Data>
+            <Rows>
+                <Row>
+                    <Field Name="Title">Inadequate analysis to justify design</Field>
+                    <Field Name="SortId">1</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Inadequate analysis to justify connection design</Field>
+                    <Field Name="SortId">2</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Member thermal loads exceed capacity</Field>
+                    <Field Name="SortId">3</Field>
+                </Row>                
+                <Row>
+                    <Field Name="Title">Innadequate detailing of installation methodology results in miscommunication of design intent and confusion on site</Field>
+                    <Field Name="SortId">4</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Space checking of design with permanent works/buildout structure to ensure it doesn't clash with strut design</Field>
+                    <Field Name="SortId">5</Field>
+                </Row>
+            </Rows>
+        </Data>
+    </ListInstance>
+    <ListInstance
+        FeatureId="00bfea71-de22-43b2-a848-c05709900100"
+        Title="Review Checklist Defaults"
+        Description="Project Management - Review Checklist Defaults"
+        CustomSchema="rc_defaults_schema.xml"
+        TemplateType="100"
+        Url="Lists/ReviewChecklistDefaults">
+        <Data>
+            <Rows>
+                <Row>
+                    <Field Name="Title">Verify if assumptions originated from the client or the engineer</Field>
+                    <Field Name="Type">1</Field>
+                    <Field Name="SortId">1</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Ensure client provided parameters are included</Field>
+                    <Field Name="Type">1</Field>
+                    <Field Name="SortId">2</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">List all assumptions and provide narration if necessary</Field>
+                    <Field Name="Type">1</Field>
+                    <Field Name="SortId">3</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Confirm if input were provided by the client</Field>
+                    <Field Name="Type">2</Field>
+                    <Field Name="SortId">1</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Identify the source of the inputs</Field>
+                    <Field Name="Type">2</Field>
+                    <Field Name="SortId">2</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Dead load</Field>
+                    <Field Name="Type">3</Field>
+                    <Field Name="SortId">1</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Live load</Field>
+                    <Field Name="Type">3</Field>
+                    <Field Name="SortId">2</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Wind load</Field>
+                    <Field Name="Type">3</Field>
+                    <Field Name="SortId">3</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Seismic or other loads</Field>
+                    <Field Name="Type">3</Field>
+                    <Field Name="SortId">4</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Serviceability</Field>
+                    <Field Name="Type">3</Field>
+                    <Field Name="SortId">5</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Ultimate</Field>
+                    <Field Name="Type">3</Field>
+                    <Field Name="SortId">6</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Verify limiting deflection ratios</Field>
+                    <Field Name="Type">3</Field>
+                    <Field Name="SortId">7</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Validate that dimension/layout assumptions are accurate</Field>
+                    <Field Name="Type">4</Field>
+                    <Field Name="SortId">1</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Confirm load path assumptions</Field>
+                    <Field Name="Type">4</Field>
+                    <Field Name="SortId">2</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Evaluate load path assumptions based on surroundings, connections, and stiffness</Field>
+                    <Field Name="Type">4</Field>
+                    <Field Name="SortId">3</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Check the equations used</Field>
+                    <Field Name="Type">5</Field>
+                    <Field Name="SortId">1</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Australian standards used</Field>
+                    <Field Name="Type">5</Field>
+                    <Field Name="SortId">2</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Verify units and conversions</Field>
+                    <Field Name="Type">5</Field>
+                    <Field Name="SortId">3</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Review if results are as expected</Field>
+                    <Field Name="Type">6</Field>
+                    <Field Name="SortId">1</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Review fixities assumed in the model (supports and members)</Field>
+                    <Field Name="Type">7</Field>
+                    <Field Name="SortId">1</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Review how have loads been applied</Field>
+                    <Field Name="Type">7</Field>
+                    <Field Name="SortId">2</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Review materials have been modelled</Field>
+                    <Field Name="Type">7</Field>
+                    <Field Name="SortId">2</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Resolution of load path in the model</Field>
+                    <Field Name="Type">7</Field>
+                    <Field Name="SortId">3</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Members satisfy deflection criteria</Field>
+                    <Field Name="Type">8</Field>
+                    <Field Name="SortId">1</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Members have been checked for serviceability and ULS</Field>
+                    <Field Name="Type">8</Field>
+                    <Field Name="SortId">2</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Members been checked for combined actions, if necessary</Field>
+                    <Field Name="Type">8</Field>
+                    <Field Name="SortId">3</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Identify the types of connections assumed</Field>
+                    <Field Name="Type">9</Field>
+                    <Field Name="SortId">1</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Check connections (plate sizes, bolts, etc)</Field>
+                    <Field Name="Type">9</Field>
+                    <Field Name="SortId">2</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Perform combined connection checks</Field>
+                    <Field Name="Type">9</Field>
+                    <Field Name="SortId">3</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Perform stability checks for sliding, overturning, and bearing</Field>
+                    <Field Name="Type">10</Field>
+                    <Field Name="SortId">1</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Check the allowable bearing pressure (ABP)</Field>
+                    <Field Name="Type">11</Field>
+                    <Field Name="SortId">1</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Confirm appropriate footings are used for soil conditions</Field>
+                    <Field Name="Type">11</Field>
+                    <Field Name="SortId">2</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Verify footing size and reinforcement</Field>
+                    <Field Name="Type">11</Field>
+                    <Field Name="SortId">3</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Ensure everything in the title block is correct. Refer to project specific templates</Field>
+                    <Field Name="Type">12</Field>
+                    <Field Name="SortId">1</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Verify scales according to Cerecon standard guidelines</Field>
+                    <Field Name="Type">12</Field>
+                    <Field Name="SortId">2</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Avoid repeating information to prevent discrepancies</Field>
+                    <Field Name="Type">12</Field>
+                    <Field Name="SortId">3</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Save the drawings in the correct folder with the right name</Field>
+                    <Field Name="Type">12</Field>
+                    <Field Name="SortId">4</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Determine if a content/cover page is required</Field>
+                    <Field Name="Type">13</Field>
+                    <Field Name="SortId">1</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Validate the relevance of general notes</Field>
+                    <Field Name="Type">14</Field>
+                    <Field Name="SortId">1</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Ensure assumptions align with calculations (e.g., loads, steel grade, bar lapping)</Field>
+                    <Field Name="Type">14</Field>
+                    <Field Name="SortId">2</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Confirm GA includes all necessary high-level details (dimensions, hatchings)</Field>
+                    <Field Name="Type">15</Field>
+                    <Field Name="SortId">1</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Ensure section marks reference the correct drawings</Field>
+                    <Field Name="Type">15</Field>
+                    <Field Name="SortId">2</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Ensure GA avoids excessive detail on GA drawings if they are called up in detail drawings</Field>
+                    <Field Name="Type">15</Field>
+                    <Field Name="SortId">3</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Ensure they are consistent with the section marks. Directions, length of section cut</Field>
+                    <Field Name="Type">16</Field>
+                    <Field Name="SortId">1</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Reference the correct plan drawing number in labels</Field>
+                    <Field Name="Type">16</Field>
+                    <Field Name="SortId">2</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Show cut lines appropriately</Field>
+                    <Field Name="Type">16</Field>
+                    <Field Name="SortId">3</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Ensure details are correctly called up on sections/plans</Field>
+                    <Field Name="Type">17</Field>
+                    <Field Name="SortId">1</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Provide all relevant details without redundancy</Field>
+                    <Field Name="Type">17</Field>
+                    <Field Name="SortId">2</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Consistency of details with calculations</Field>
+                    <Field Name="Type">17</Field>
+                    <Field Name="SortId">3</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Ensure report contains standards, specifications and analysis assumptions</Field>
+                    <Field Name="Type">18</Field>
+                    <Field Name="SortId">1</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Confirm that the reports are comprehensive and cover all necessary aspects of the project</Field>
+                    <Field Name="Type">18</Field>
+                    <Field Name="SortId">2</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Validate the accuracy and relevance of the report content</Field>
+                    <Field Name="Type">19</Field>
+                    <Field Name="SortId">1</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Ensure that all assumptions and parameters are clearly stated and justified</Field>
+                    <Field Name="Type">19</Field>
+                    <Field Name="SortId">2</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Ensure reports adhere to Cerecon's standard formatting guidelines</Field>
+                    <Field Name="Type">20</Field>
+                    <Field Name="SortId">1</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Check for consistency in terminology and presentation throughout the reports</Field>
+                    <Field Name="Type">20</Field>
+                    <Field Name="SortId">2</Field>
+                </Row>
+                <Row>
+                    <Field Name="Title">Verify that all necessary supporting documents are attached and referenced correctly in the reports</Field>
+                    <Field Name="Type">21</Field>
+                    <Field Name="SortId">1</Field>
+                </Row>
+            </Rows>
+        </Data>
+    </ListInstance>
+</Elements>

@@ -1,0 +1,108 @@
+<List xmlns="http://schemas.microsoft.com/sharepoint/"
+    xmlns:ows="Microsoft SharePoint"
+    Title="Review Checklist"
+    EnableContentTypes="TRUE"
+    FolderCreation="FALSE"
+    Direction="$Resources:Direction;"
+    Url="Lists/ReviewChecklist"
+    BaseType="0">
+    <MetaData>
+        <Fields>
+            <Field Type="Lookup" DisplayName="Project" Required="FALSE"
+                ID="{df20370f-9046-43f2-98c8-197a6cb8155c}"
+                Name="Project"
+                StaticName="Project"
+                List="Lists/TSSPProject Poll"
+                ShowField="Title" />
+            <Field Type="Lookup" DisplayName="Stage" Required="FALSE"
+                ID="{260952d6-e184-474e-b3b7-bac70d45a284}"
+                Name="Stage"
+                StaticName="Stage"
+                List="Lists/TSSPProject Task Poll"
+                ShowField="Title" />
+            <Field Type="Note" DisplayName="Review" Required="FALSE"
+                ID="{e45af26e-7a55-4496-92ac-a07a150c8461}"
+                StaticName="Review"
+                Name="Review"
+                RichText="FALSE" RichTextMode="Compatible"
+                IsolateStyles="FALSE" AppendOnly="FALSE" NumLines="6"
+            />
+            <Field Type="Note" DisplayName="Comments" Required="FALSE"
+                ID="{4bd628bf-d0de-4187-8262-b3c1a7cb8a6b}"
+                StaticName="Comments"
+                Name="Comments"
+                RichText="FALSE" RichTextMode="Compatible"
+                IsolateStyles="FALSE" AppendOnly="FALSE" NumLines="6"
+            />
+            <Field Type="Boolean" DisplayName="Complete" Required="FALSE"
+                ID="{7914a538-92fd-4602-b9dd-130923391b4f}"
+                Name="Complete"
+                StaticName="Complete">
+                <Default>0</Default>
+            </Field>
+            <Field Type="Boolean" DisplayName="NA" Required="FALSE"
+                ID="{e241d68b-c45a-4d4c-89a8-8e17e017d71f}"
+                Name="NA"
+                StaticName="NA">
+                <Default>0</Default>
+            </Field>
+            <Field Type="DateTime" DisplayName="Date" Required="TRUE"
+                ID="{b72e308b-8af5-4caa-8530-a3ee1f2ef548}"
+                Name="Date"
+                StaticName="Date">
+            </Field>
+            <Field Type="Lookup" DisplayName="Type" Required="FALSE"
+                ID="{e43672c8-fe54-4e2d-bf2c-09e85578eed1}"
+                Name="Type"
+                StaticName="Type"
+                List="Lists/ReviewTypes"
+                ShowField="Title" />
+            <Field Type="Number" DisplayName="Sequence" Required="FALSE"
+                Min="0"
+                ID="{b1e227a0-8d17-4d3d-a3fb-fc584a3265a0}"
+                StaticName="Sequence"
+                Name="Sequence"
+            />
+        </Fields>
+        <Views>
+            <View BaseViewID="1"
+                Type="HTML"
+                WebPartZoneID="Main"
+                DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;"
+                DefaultView="TRUE"
+                MobileView="TRUE"
+                MobileDefaultView="TRUE"
+                SetupPath="pages\viewpage.aspx"
+                ImageUrl="/_layouts/images/generic.png"
+                Url="AllItems.aspx">
+                <XslLink Default="TRUE">main.xsl</XslLink>
+                <JSLink>clienttemplates.js</JSLink>
+                <RowLimit Paged="TRUE">30</RowLimit>
+                <Toolbar Type="Standard" />
+                <ViewFields>
+                    <FieldRef Name="Project"></FieldRef>
+                    <FieldRef Name="Stage"></FieldRef>
+                    <FieldRef Name="Review"></FieldRef>
+                    <FieldRef Name="Comments"></FieldRef>
+                    <FieldRef Name="Complete"></FieldRef>
+                    <FieldRef Name="NA"></FieldRef>
+                    <FieldRef Name="Date"></FieldRef>
+                    <FieldRef Name="Type"></FieldRef>
+                    <FieldRef Name="Sequence"></FieldRef>
+                </ViewFields>
+                <Query>
+                    <OrderBy>
+                        <FieldRef Name="ID" />
+                    </OrderBy>
+                </Query>
+            </View>
+        </Views>
+        <Forms>
+            <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx"
+                WebPartZoneID="Main" />
+            <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx"
+                WebPartZoneID="Main" />
+            <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+        </Forms>
+    </MetaData>
+</List>

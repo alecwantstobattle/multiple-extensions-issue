@@ -1,0 +1,127 @@
+<List xmlns="http://schemas.microsoft.com/sharepoint/"
+    xmlns:ows="Microsoft SharePoint"
+    Title="Safety Design"
+    EnableContentTypes="TRUE"
+    FolderCreation="FALSE"
+    Direction="$Resources:Direction;"
+    Url="Lists/SafetyDesign"
+    BaseType="0">
+    <MetaData>
+        <Fields>
+            <Field Type="Lookup" DisplayName="Project" Required="FALSE"
+                ID="{ff6139fa-d3ca-467a-b3a5-a8c66754d0ce}"
+                Name="Project"
+                StaticName="Project"
+                List="Lists/TSSPProject Poll"
+                ShowField="Title" />
+            <Field Type="Lookup" DisplayName="Stage" Required="FALSE"
+                ID="{634bd3ce-6e90-451d-9faa-87a0f91f19a8}"
+                Name="Stage"
+                StaticName="Stage"
+                List="Lists/TSSPProject Task Poll"
+                ShowField="Title" />
+            <Field Type="Note" DisplayName="Risk" Required="FALSE"
+                ID="{c540289e-8fce-410c-a7fe-47076d49b3f3}"
+                StaticName="Risk"
+                Name="Risk"
+                RichText="FALSE" RichTextMode="Compatible"
+                IsolateStyles="FALSE" AppendOnly="FALSE" NumLines="6"
+            />
+            <Field Type="Number" DisplayName="Before Likelihood" Required="FALSE"
+                ID="{1fb22fcb-552b-49be-b96e-84c2255d808f}"
+                StaticName="Before_x0020_Likelihood"
+                Name="Before_x0020_Likelihood" />
+            <Field Type="Number" DisplayName="Before Consequence" Required="FALSE"
+                Min="0" Max="5"
+                ID="{0e506394-4d57-4afb-8dcd-361249ea6dad}"
+                StaticName="Before_x0020_Consequence"
+                Name="Before_x0020_Consequence"
+            />
+            <Field Type="Number" DisplayName="Before Risk Rating" Required="FALSE"
+                Min="0"
+                ID="{d650e71f-4df1-4725-b3f6-af40aee1546d}"
+                StaticName="Before_x0020_Risk_x0020_Rating"
+                Name="Before_x0020_Risk_x0020_Rating"
+            />
+            <Field Type="Note" DisplayName="Mitigation Plan" Required="FALSE"
+                ID="{58b6e3e7-59d5-467f-bc22-58c229083b20}"
+                StaticName="MitigationPlan"
+                Name="MitigationPlan"
+                RichText="FALSE" RichTextMode="Compatible"
+                IsolateStyles="FALSE" AppendOnly="FALSE" NumLines="6"
+            />
+            <Field Type="Number" DisplayName="After Likelihood" Required="FALSE"
+                Min="0" Max="5"
+                ID="{708dce39-acf1-4477-8b07-fee48b6e1371}"
+                StaticName="After_x0020_Likelihood"
+                Name="After_x0020_Likelihood"
+            />
+            <Field Type="Number" DisplayName="After Consequence" Required="FALSE"
+                Min="0" Max="5"
+                ID="{f47263dd-2d6c-4b72-bc2b-a77e3c4d0a76}"
+                StaticName="After_x0020_Consequence"
+                Name="After_x0020_Consequence"
+            />
+            <Field Type="Number" DisplayName="After Risk Rating" Required="FALSE"
+                Min="0"
+                ID="{f1d0bcb0-c595-4da6-9826-c14dfddc04bc}"
+                StaticName="After_x0020_Risk_x0020_Rating"
+                Name="After_x0020_Risk_x0020_Rating"
+            />
+            <Field Type="Text" DisplayName="Person Responsible" Required="FALSE"
+                ID="{2aefed5c-9dc6-4ddd-be7a-b50cdc8ccfff}"
+                StaticName="PersonResponsible"
+                Name="PersonResponsible"
+            />
+            <Field Type="Number" DisplayName="Sequence" Required="FALSE"
+                Min="0"
+                ID="{15dedeee-45f7-4fd9-8f58-252ec397eaf0}"
+                StaticName="Sequence"
+                Name="Sequence"
+            />
+        </Fields>
+        <Views>
+            <View BaseViewID="1"
+                Type="HTML"
+                WebPartZoneID="Main"
+                DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;"
+                DefaultView="TRUE"
+                MobileView="TRUE"
+                MobileDefaultView="TRUE"
+                SetupPath="pages\viewpage.aspx"
+                ImageUrl="/_layouts/images/generic.png"
+                Url="AllItems.aspx">
+                <XslLink Default="TRUE">main.xsl</XslLink>
+                <JSLink>clienttemplates.js</JSLink>
+                <RowLimit Paged="TRUE">30</RowLimit>
+                <Toolbar Type="Standard" />
+                <ViewFields>
+                    <FieldRef Name="Project"></FieldRef>
+                    <FieldRef Name="Stage"></FieldRef>
+                    <FieldRef Name="Risk"></FieldRef>
+                    <FieldRef Name="Before_x0020_Likelihood"></FieldRef>
+                    <FieldRef Name="Before_x0020_Consequence"></FieldRef>
+                    <FieldRef Name="Before_x0020_Risk_x0020_Rating"></FieldRef>
+                    <FieldRef Name="MitigationPlan"></FieldRef>
+                    <FieldRef Name="After_x0020_Likelihood"></FieldRef>
+                    <FieldRef Name="After_x0020_Consequence"></FieldRef>
+                    <FieldRef Name="After_x0020_Risk_x0020_Rating"></FieldRef>
+                    <FieldRef Name="PersonResponsible"></FieldRef>
+                    <FieldRef Name="Sequence"></FieldRef>
+                </ViewFields>
+                <Query>
+                    <OrderBy>
+                        <FieldRef Name="ID" />
+                    </OrderBy>
+                </Query>
+            </View>
+        </Views>
+        <Forms>
+            <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx"
+                WebPartZoneID="Main" />
+            <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx"
+                WebPartZoneID="Main" />
+            <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+        </Forms>
+    </MetaData>
+</List>
