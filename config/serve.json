@@ -3,9 +3,8 @@
   "port": 4321,
   "https": true,
   "serveConfigurations": {
-    "default": {
-      "pageUrl": "https://devproscomau.sharepoint.com/sites/cerecon/Lists/TSSPProject%20Task%20Poll/Active%20Stages.aspx",
-      // "pageUrl": "https://{tenantDomain}/SitePages/myPage.aspx",
+    "default": {      
+      "pageUrl": "https://{tenantDomain}/SitePages/myPage.aspx",
       "customActions": {
         "4bf6c425-f15d-4aab-bad2-cde88bc3c958": {
           "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
@@ -17,8 +16,7 @@
       }
     },
     "projectManagementAction": {
-      "pageUrl": "https://devproscomau.sharepoint.com/sites/cerecon/Lists/TSSPProject%20Task%20Poll/Active%20Stages.aspx",
-      // "pageUrl": "https://{tenantDomain}/SitePages/myPage.aspx",
+      "pageUrl": "https://{tenantDomain}/SitePages/myPage.aspx",
       "customActions": {
         "4bf6c425-f15d-4aab-bad2-cde88bc3c958": {
           "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
